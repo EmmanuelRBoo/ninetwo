@@ -1,4 +1,5 @@
-import { Block, Separator } from '@/components'
+import { Block, Separator, Card } from '@/components'
+import items from '@/items';
 
 export default function Home() {
   return (
@@ -21,10 +22,25 @@ export default function Home() {
         <h2 className='mb-8 font-semibold text-center text-2xl md:text-4xl lg:text-5xl'>Nossos números</h2>
 
         <ul className='grid gap-6 grid-cols-1 lg:grid-cols-2'>
-          <li className='text-xl border border-zinc-600 sm:w-96 p-2 rounded-md'><p>+10 anos de atuação</p></li>
-          <li className='text-xl border border-zinc-600 sm:w-96 p-2 rounded-md'><p>+300 clientes satisfeitos</p></li>
-          <li className='text-xl border border-zinc-600 sm:w-96 p-2 rounded-md'><p>+500 filmes registrados</p></li>
-          <li className='text-xl border border-zinc-600 sm:w-96 p-2 rounded-md'><p>+2.000 projetos e filmes entregues</p></li>
+          {items.ourNumbers.map((item, index) => <li key={index} className='text-xl border border-zinc-600 sm:w-96 p-2 rounded-md'><p>{item}</p></li>)}
+        </ul>
+      </Block>
+
+      <Separator />
+
+      <Block id='audiovisual'>
+        <h2 className='mb-8 font-semibold text-center text-2xl md:text-4xl lg:text-5xl'>Por que você ainda não investe em <span className='text-primary'>audiovisual</span> ?</h2>
+
+        <ul className='flex gap-8 flex-wrap justify-center'>
+          {items.audiovisual.map((item, index) => (
+            <li key={index}>
+              <Card size='sm'>
+                <h2>{item.title}</h2>
+
+                <p>{item.description}</p>
+              </Card>
+            </li>
+          ))}
         </ul>
       </Block>
 
