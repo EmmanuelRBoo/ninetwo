@@ -73,11 +73,33 @@ export default function Home() {
 
         <p className='text-xl mb-12 md:text-2xl text-gray-300'>Veja o que fazemos na prática!</p>
 
-        <ul className='flex flex-wrap justify-center gap-4'>
+        <ul className='flex flex-wrap justify-center gap-4 mb-8 overflow-scroll'>
           {items.portfolio.map((item, index) => (
             <li key={index}>
               <Card size='lg'>
                 <h3 className='text-2xl font-semibold text-center'>{item}</h3>
+              </Card>
+            </li>
+          ))}
+        </ul>
+      </Block>
+
+      <Separator />
+
+      <Block id='solutions'>
+        <h2 className='mb-8 font-semibold text-center text-2xl md:text-4xl lg:text-5xl'>Soluções audiovisuais para empresas</h2>
+
+        <p className='text-xl mb-8 md:text-2xl text-primary'>Oferecemos um leque completo de soluções audiovisuais para impulsionar sua marca.</p>
+
+        <ul className='grid grid-cols-1 gap-4 overflow-scroll p-8 xl:grid-cols-2'>
+          {items.solutions.map((item, index) => (
+            <li key={index}>
+              <Card size='lg'>
+                <h3 className='text-2xl font-semibold'>{item.title}</h3>
+
+                <p>{item.description}</p>
+
+                <button className='bg-primary min-w-72 w-1/2 py-2 whitespace-nowrap rounded-md cursor-pointer'>SAIBA MAIS!</button>
               </Card>
             </li>
           ))}
