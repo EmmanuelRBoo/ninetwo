@@ -29,9 +29,9 @@ export default function Home() {
       <Separator />
 
       <Block id='audiovisual'>
-        <h2 className='mb-8 font-semibold text-center text-2xl md:text-4xl lg:text-5xl'>Por que você ainda não investe em <span className='text-primary'>audiovisual</span> ?</h2>
+        <h2 className='mb-12 font-semibold text-center text-2xl md:text-4xl lg:text-5xl'>Por que você ainda não investe em <span className='text-primary'>audiovisual</span> ?</h2>
 
-        <ul className='flex gap-8 flex-wrap justify-center'>
+        <ul className='flex gap-8 flex-wrap justify-center overflow-scroll p-12 md:justify-start'>
           {items.audiovisual.map((item, index) => (
             <li key={index}>
               <Card size='sm'>
@@ -45,6 +45,26 @@ export default function Home() {
       </Block>
 
       <Separator />
+
+      <Block id='our_clients'>
+        <h2>Nossos Clientes</h2>
+
+        <ul className='grid gap-4 grid-cols-1 overflow-scroll p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+          {items.ourClients.map((items, index) => (
+            <li key={index}>
+              <Card size='sm'>
+                <img
+                  className='w-44 h-28 object-contain rounded-sm mx-auto'
+                  src={items.image}
+                  alt={items.title}
+                />
+
+                <h3 className='text-center mt-2 text-2xl font-semibold'>{items.title}</h3>
+              </Card>
+            </li>
+          ))}
+        </ul>
+      </Block>
     </main>
   );
 }
