@@ -65,6 +65,24 @@ export default function Home() {
           ))}
         </ul>
       </Block>
+
+      <Separator />
+
+      <Block id='portfolio'>
+        <h2 className='mb-8 font-semibold text-center text-2xl md:text-4xl lg:text-5xl'>Portfólio</h2>
+
+        <p className='text-xl mb-12 md:text-2xl text-gray-300'>Veja o que fazemos na prática!</p>
+
+        <ul className='flex flex-wrap justify-center gap-4'>
+          {items.portfolio.map((item, index) => (
+            <li key={index}>
+              <Card size='lg'>
+                <h3 className='text-2xl font-semibold text-center'>{item}</h3>
+              </Card>
+            </li>
+          ))}
+        </ul>
+      </Block>
     </main>
   );
 }
