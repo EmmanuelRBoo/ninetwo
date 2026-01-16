@@ -58,7 +58,7 @@ export default function Home() {
                 <img
                   className='w-44 h-28 object-contain rounded-sm mx-auto'
                   src={items.image}
-                  alt={items.title}
+                  alt={`${items.title}' logo`}
                 />
 
                 <h3 className='text-center mt-2 text-2xl font-semibold'>{items.title}</h3>
@@ -189,7 +189,7 @@ export default function Home() {
                 <img
                   className='w-14 rounded-lg cursor-pointer'
                   src={item.image}
-                  alt="logo"
+                  alt={`${item.from}'s logo`}
                 />
               </Link>
             </li>
