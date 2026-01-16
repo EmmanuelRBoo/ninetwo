@@ -40,7 +40,7 @@ export default function LeadModal() {
     return (
         <>
             <button
-                className='bg-primary min-w-72 w-1/2 py-2 whitespace-nowrap rounded-md cursor-pointer'
+                className='bg-primary min-w-72 w-1/2 py-2 whitespace-nowrap rounded-md cursor-pointer text-white'
                 onClick={() => setOpen(true)}
             >
                 Conheça nossas soluções
