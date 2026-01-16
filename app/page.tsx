@@ -113,6 +113,24 @@ export default function Home() {
       </Block>
 
       <Separator />
+
+      <Block id='why'>
+        <h2 className='mb-12 font-semibold text-center text-2xl md:text-4xl lg:text-5xl'>Por que escolher a Motin Films?</h2>
+
+        <ul className='flex items-center p-8 gap-4 justify-center overflow-scroll flex-wrap'>
+          {items.why.map((item, index) => (
+            <li key={index}>
+              <Card size='lg'>
+                <h3 className='text-2xl font-semibold'>{item.title}</h3>
+
+                <p>{item.description}</p>
+              </Card>
+            </li>
+          ))}
+        </ul>
+      </Block>
+
+      <Separator />
     </main>
   );
 }
