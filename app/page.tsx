@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Block, Separator, Card } from '@/components'
 import items from '@/items';
 
@@ -164,6 +166,32 @@ export default function Home() {
               <p className='italic text-md'>"{item.description}"</p>
 
               <h3 className='text-end mt-6'>- {item.author}</h3>
+            </li>
+          ))}
+        </ul>
+      </Block>
+
+      <Separator />
+
+      <Block id='contacts'>
+        <h2 className='font-semibold mb-12 text-center text-2xl md:text-4xl lg:text-5xl'>Contato</h2>
+
+        <div className='text-start px-6 *:mb-4'>
+          <p><b>Endereço: </b> Rua Coronel Joaquim Ignácio Taborda Ribas - 212, Bigorrilho, Curitiba - PR CEP 80730-320, Brasil</p>
+          <p><b>E-mail: </b> contato@motinfilms.com.br</p>
+          <p><b>Telefone: </b> +55 41 9142-5126</p>
+        </div>
+
+        <ul className='flex gap-4 justify-start flex-wrap'>
+          {items.contacts.map((item, index) => (
+            <li key={index}>
+              <Link href={item.url} target='_blank'>
+                <img
+                  className='w-14 rounded-lg cursor-pointer'
+                  src={item.image}
+                  alt="logo"
+                />
+              </Link>
             </li>
           ))}
         </ul>

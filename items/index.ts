@@ -6,6 +6,7 @@ import { solutions } from './solutions'
 import { why } from './why'
 import { roadmap } from './roadmap'
 import { results } from './results'
+import { contacts } from './contacts'
 export default {
     audiovisual,
     ourNumbers,
@@ -14,5 +15,6 @@ export default {
     solutions,
     why,
     roadmap,
-    results
+    results,
+    contacts
 }
