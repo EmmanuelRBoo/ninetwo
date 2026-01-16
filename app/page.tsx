@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Block, Separator, Card } from '@/components'
+import { Block, Separator, Card, Modal } from '@/components'
 import items from '@/items';
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
 
         <p className='text-center mb-12 text-xl md:text-2xl text-gray-300'>Criamos conteúdos que conectam marcas e pessoas através de histórias memoráveis</p>
 
-        <button className='bg-primary min-w-72 w-1/2 py-2 whitespace-nowrap rounded-md cursor-pointer'>Conheça nossas soluções</button>
+        <Modal.LeadModal />
       </Block>
 
       <Separator />
