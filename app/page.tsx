@@ -105,6 +105,14 @@ export default function Home() {
           ))}
         </ul>
       </Block>
+
+      <Separator />
+
+      <Block id='ancine'>
+        <h2 className='flex items-center gap-4 text-primary font-semibold text-center text-2xl md:text-4xl lg:text-5xl'>Produtora Licenciada - Ancine <img className='w-24 rounded-md' src='https://www.brisateixeira.com/wp-content/uploads/2018/05/ancine.png' /></h2>
+      </Block>
+
+      <Separator />
     </main>
   );
 }
