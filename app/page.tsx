@@ -131,6 +131,26 @@ export default function Home() {
       </Block>
 
       <Separator />
+
+      <Block id='roadmap'>
+        <h2 className='font-semibold text-center text-2xl md:text-4xl lg:text-5xl'>Nossa metodologia</h2>
+
+        <h3 className='text-xl my-4 md:text-3xl font-semibold'>Você traz a ideia e nós executamos</h3>
+
+        <p className='text-md mb-8 md:text-xl text-center'>Na Motin Films, você não precisa se preocupar com nada. Nós cuidamos de cada detalhe para que você se concentre no que realmente importa: o crescimento do seu negócio.</p>
+
+        <ul className='flex gap-4 flex-wrap overflow-scroll justify-center md:justify-start'>
+          {items.roadmap.map((item) => (
+            <li key={item.phase}>
+              <h2 className='font-semibold text-xl text-start'>{item.phase} - {item.title}</h2>
+
+              <Card size='lg'>{item.description}</Card>
+            </li>
+          ))}
+        </ul>
+      </Block>
+
+      <Separator />
     </main>
   );
 }
