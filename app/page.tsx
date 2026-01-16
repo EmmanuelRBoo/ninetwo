@@ -139,7 +139,7 @@ export default function Home() {
 
         <p className='text-md mb-8 md:text-xl text-center'>Na Motin Films, você não precisa se preocupar com nada. Nós cuidamos de cada detalhe para que você se concentre no que realmente importa: o crescimento do seu negócio.</p>
 
-        <ul className='flex gap-4 flex-wrap overflow-scroll justify-center md:justify-start'>
+        <ul className='flex gap-4 flex-wrap overflow-scroll justify-center md:justify-start p-6'>
           {items.roadmap.map((item) => (
             <li key={item.phase}>
               <h2 className='font-semibold text-xl text-start'>{item.phase} - {item.title}</h2>
@@ -151,6 +151,23 @@ export default function Home() {
       </Block>
 
       <Separator />
+
+      <Block id='results'>
+        <h2 className='font-semibold mb-12 text-center text-2xl md:text-4xl lg:text-5xl'>Resultados comprovados por quem mais entende</h2>
+
+        <ul className='flex flex-wrap gap-8 justify-center overflow-scroll'>
+          {items.results.map((item, index) => (
+            <li
+              key={index}
+              className='border min-w-2xs flex flex-col justify-between rounded-md w-1/4 border-primary p-4 shadow-lg shadow-primary'
+            >
+              <p className='italic text-md'>"{item.description}"</p>
+
+              <h3 className='text-end mt-6'>- {item.author}</h3>
+            </li>
+          ))}
+        </ul>
+      </Block>
     </main>
   );
 }

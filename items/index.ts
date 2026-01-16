@@ -5,6 +5,7 @@ import { portfolio } from './portfolio'
 import { solutions } from './solutions'
 import { why } from './why'
 import { roadmap } from './roadmap'
+import { results } from './results'
 export default {
     audiovisual,
     ourNumbers,
@@ -12,5 +13,6 @@ export default {
     portfolio,
     solutions,
     why,
-    roadmap
+    roadmap,
+    results
 }
